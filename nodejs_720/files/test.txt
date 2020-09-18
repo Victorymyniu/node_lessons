@@ -1,0 +1,12 @@
+nodejs 使用事件驱动的模型
+它的服务一直是处理接收请求，但不等待任何的读写操作
+所以性能很高，这也叫“非阻塞式的IO或是事件驱动IO”
+
+
+nodejs 的事件使用 events 模块
+  var xx=require('events')
+通过实例化里面的 EventEmitter 类，来绑定和监听事件
+  var event = new xx.EventEmitter()
+
+绑定事件：event.on(...)
+监听事件的触发：event.emit(...)
