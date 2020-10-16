@@ -1,7 +1,9 @@
 const express  = require('express')
 const app = express();
-// 实现静态资源访问功能
-app.use(require('cors')())
+const cors = require('cors')
+// node跨域cors模块
+// cors模块实现跨域，这是最简单的配置
+app.use(cors())
 app.use('/',express.static('public'))
 
 app.get('/about', (req,res) => {

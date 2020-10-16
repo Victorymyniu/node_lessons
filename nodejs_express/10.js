@@ -18,3 +18,5 @@ app.post('/add',(req,res) => {
 })
 // 端口监听
 app.listen(3000)
+
+// 测试案例在下面 post.html
